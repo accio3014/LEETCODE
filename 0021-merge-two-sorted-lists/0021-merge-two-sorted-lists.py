@@ -16,12 +16,12 @@ class Solution:
         else:
             tail = head = ListNode()        # tail, head는 같은 주소를 가리킴
             
-            while(list1 and list2):         # list1 또는 list2의 값을 전부 반복함
+            while(list1 and list2):         # list1, list2의 값을 전부 반복함
                                             # 내부에서 list1, list2의 내용이 변경되기 때문에
                                             # 내부에 따로 증감식 등이 필요 없음
                 if(list1.val < list2.val): 
                     tail.next = list1       # ListNode의 다음값으로 list1의 현재 값을 넣음
-                    list1 = list1.next       # 다음 값으로 교체
+                    list1 = list1.next      # 다음 값으로 교체
                 else:
                     tail.next = list2
                     list2 = list2.next
